@@ -43,8 +43,10 @@ public class Book implements Serializable {
     }
 
 
-    public Book(String title, String author, String publishingHouse, LocalDate publicationDate, String description, int bookshelfNumber, int shelfNumber) {
+    public Book(Long id, String title, String bookCode, String author, String publishingHouse, LocalDate publicationDate, String description, int bookshelfNumber, int shelfNumber) {
+        this.id = id;
         this.title = title;
+        this.bookCode = bookCode;
         this.author = author;
         this.publishingHouse = publishingHouse;
         this.publicationDate = publicationDate;
@@ -52,6 +54,4 @@ public class Book implements Serializable {
         this.bookshelfNumber = bookshelfNumber;
         this.shelfNumber = shelfNumber;
     }
-
-
 }

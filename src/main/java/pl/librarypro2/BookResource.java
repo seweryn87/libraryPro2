@@ -32,13 +32,13 @@ public class BookResource {
     @PostMapping("/add")
     public ResponseEntity<Book> addBook(@RequestBody Book book){
         Book newBook = bookService.addBook(book);
-        return new ResponseEntity<>(book, HttpStatus.CREATED);
+        return new ResponseEntity<>(newBook, HttpStatus.CREATED);
     }
 
     @PutMapping("/update")
     public ResponseEntity<Book> updateBook(@RequestBody Book book){
         Book updateBook = bookService.updateBook(book);
-        return new ResponseEntity<>(book, HttpStatus.OK);
+        return new ResponseEntity<>(updateBook, HttpStatus.OK);
     }
 
     @PutMapping("/delete/{id}")
